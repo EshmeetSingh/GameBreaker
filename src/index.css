@@ -1,0 +1,65 @@
+:root {
+  color-scheme: light;
+
+  --text: #1c1c1c;
+  --text-h: #1c1c1c;
+  --bg: #f8f4e9;
+  --surface: #f1f3f2;
+  --border: #d9e2e1;
+  --card-bg: #e8e5dc;
+  --card-image-bg: #d5e3df;
+  --card-content-bg: #a9d1cb;
+  --card-content-text: #194d49;
+  --accent: #3a7d7b;
+  --accent-bg: rgb(58 125 123 / 16%);
+  --accent-border: rgb(58 125 123 / 50%);
+  --link-visited: #285957;
+  --shadow: rgb(0 0 0 / 10%) 0 10px 15px -3px, rgb(0 0 0 / 5%) 0 4px 6px -2px;
+
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+
+  font: 18px/145% var(--sans);
+  letter-spacing: 0.18px;
+  color: var(--text);
+  background: var(--bg);
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.dark-mode {
+  color-scheme: dark;
+
+  --text: #f8f4e9;
+  --text-h: #f8f4e9;
+  --bg: #1c1c1c;
+  --surface: #292929;
+  --border: #414141;
+  --card-bg: #303030;
+  --card-image-bg: #303a35;
+  --card-content-bg: #354b25;
+  --card-content-text: #e0efb5;
+  --accent: #a7c957;
+  --accent-bg: rgb(167 201 87 / 20%);
+  --accent-border: rgb(167 201 87 / 50%);
+  --link-visited: #829f3d;
+  --shadow: rgb(0 0 0 / 40%) 0 10px 15px -3px, rgb(0 0 0 / 25%) 0 4px 6px -2px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,102 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.main-layout {
+  position: relative;
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.sidebar-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background-color: rgb(0 0 0 / 35%);
+  backdrop-filter: blur(4px);
+}
+
+.content-layout {
+  display: grid;
+  grid-template-columns: 2.5fr 1.5fr;
+  gap: 24px;
+}
+
+.free-game-carousel .game-card,
+.best-deals-carousel .game-card {
+  flex-shrink: 0;
+}
+
+/* Shared accent button styling */
+.button,
+.grid-type-buttons button {
+  padding: 8px 12px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  background-color: var(--accent);
+  color: var(--bg);
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease;
+}
+
+.button:hover,
+.grid-type-buttons button:hover {
+  background-color: var(--accent-border);
+  border-color: var(--accent-border);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--link-visited);
+}
+
+.error-page {
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.error-content {
+  width: min(100%, 600px);
+  padding: 32px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background-color: var(--card-image-bg);
+  box-shadow: var(--shadow);
+}
+
+.error-content h1 {
+  margin-top: 0;
+  color: var(--text-h);
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
+.error-content p {
+  margin: 16px 0 24px;
+  overflow-wrap: anywhere;
+  color: var(--text);
+}
+
+@media (max-width: 550px) {
+  .error-content {
+    padding: 24px 16px;
+  }
+}

@@ -1,0 +1,54 @@
+.games-content {
+  min-width: 0;
+}
+
+.games-content section:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.free-game-carousel,
+.best-deals-carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.free-game-carousel::-webkit-scrollbar,
+.best-deals-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .game-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .game-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  .game-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.grid-type-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto 20px;
+}

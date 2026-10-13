@@ -1,0 +1,73 @@
+.filter-sidebar {
+  position: absolute;
+  z-index: 2;
+
+  inline-size: 30%;
+  inset-block: 0;
+  inset-inline-start: 0;
+
+  background-color: var(--bg);
+  padding: 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border-right: 1px solid var(--border);
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.sidebar-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filter-sidebar select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.filter-sidebar input[type="range"] {
+  width: 100%;
+  margin: 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+/* Track */
+.filter-sidebar input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+  background-color: var(--border);
+  border-radius: 3px;
+}
+
+/* Thumb */
+.filter-sidebar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--accent);
+}
+
+.filter-sidebar h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.filter-sidebar label {
+  font-size: 0.95rem;
+}
