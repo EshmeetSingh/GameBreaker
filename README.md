@@ -106,7 +106,7 @@ game happen in the React frontend.
 You'll need Node.js and npm.
 
 ``` bash
-git clone <your-repository-url>
+git clone https://github.com/EshmeetSingh/GameBreaker
 cd gamebreaker
 npm install
 npm run dev
